@@ -1,1 +1,2 @@
-/node_modules
+# Built/distributed files
+node_modules/
