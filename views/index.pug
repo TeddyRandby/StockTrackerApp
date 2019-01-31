@@ -1,1 +1,16 @@
-| Hello World!
+head 
+  title Stock Tracker
+  script(src = 'static/scripts/superagent.js')
+  script(src = 'static/scripts/home.js')
+body
+  h1 Welcome to Stock Tracker
+  div(id='gridContainer')
+    div(id='form' )
+      form( action='/IEXCall' method='get')
+        label(for='symbol') Symbol: 
+        input(type='text', name = 'symbol')
+        button(type='submit') Submit
+    div(id='response')
+      | #{symbol}
+      | #{latestPrice}
+      
